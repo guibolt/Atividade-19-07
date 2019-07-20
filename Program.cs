@@ -9,7 +9,7 @@ namespace Numbers
         {
             List<uint> NumP = new List<uint>();
             List<uint> NumI = new List<uint>();
-
+            Operacoes p = new Operacoes();
             for (uint i = 1; i <= 100; i++)
             {
                 if (i % 2 ==0)
@@ -35,30 +35,8 @@ namespace Numbers
             Console.WriteLine("");
             Console.WriteLine($"Setimo numero par: {NumP[6]}");
             Console.WriteLine($"Vigesimo numero impar: {NumI[19]}");
-            Mudarpar(NumP);
-            Mudarimpar(NumI);
-        }
-        static void Mudarpar(List<uint> par)
-        {
-            for (uint i = 1; i <= 100; i++)
-            {
-                if (i % 2 == 0)
-                {
-                    par.Add(i - 1);
-                    par.Remove(i);
-                }
-            }
-        }
-        static void Mudarimpar(List<uint> impar)
-        {
-            for (uint i = 0; i <= 100; i++)
-            {
-                if (i % 2 != 0)
-                {
-                    impar.Add(i + 1);
-                    impar.Remove(i);
-                }
-            }
+            p.Mudarpar(NumP);
+            p.Mudarimpar(NumI);
         }
     }
 }
