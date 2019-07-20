@@ -12,14 +12,8 @@ namespace Numbers
             Operacoes p = new Operacoes();
             for (uint i = 1; i <= 100; i++)
             {
-                if (i % 2 ==0)
-                {
-                    NumP.Add(i);
-                }
-                else
-                {
-                    NumI.Add(i);
-                }
+                if (i % 2 == 0) { NumP.Add(i); }
+                else { NumI.Add(i); }
             }
             Console.WriteLine("Numeros Pares:");
             foreach (var pares in NumP)
